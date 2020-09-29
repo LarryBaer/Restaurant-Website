@@ -1,0 +1,240 @@
+/*FOR GITHUB, MAKE FOLDERS FOR PICTURES, CSS ETC FOR CLEARNER*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color:floralwhite;
+}
+/*########################NAVBAR##############################*/
+nav{
+    display:flex;
+    align-items: center;
+    color:black;
+    margin-left:20%;
+    margin-right:20%;
+
+}
+nav ul {
+    display:inline;
+    
+}
+
+.navbar-links{
+    width:100%;
+    display:flex;
+
+}
+.navbar-links ul{
+    margin:0;
+    padding:0;
+    display:flex;
+
+}
+
+.navbar-links li{
+    list-style:none;
+    
+}
+
+.navbar-links li a{
+    text-decoration:none;
+    color:red;
+    padding:1rem;
+    display:block;
+    font-family: 'Oswald', sans-serif;
+    font-size:25px;
+
+}
+
+.toggle-button{
+    position:absolute;
+    top:.75rem;
+    right:1rem;
+    flex-direction:column;
+    width:30px;
+    height:21px;
+    text-decoration:none;
+    color:black;
+    display:none;
+    font-size:50px;
+    margin-top:10px;
+}
+
+li.logo img{
+    width:108px;
+    height:108px;
+    margin-top:0px;
+}
+
+li.logo{
+    margin:0px;
+}
+.box-1{
+    width:108px;
+}
+.box-1 ul{
+    list-style-type:none;
+}
+
+.nav-left{
+    text-align:left;
+
+}
+
+.nav-right{
+    text-align:right;
+    justify-content:flex-end;
+    flex:1;
+}
+
+.navright ul{
+    justify-content:flex-end;
+}
+
+.right-ul{
+    justify-content:flex-end;
+}
+
+
+
+/*########################CAROUSEL##############################*/
+.carousel{
+    position: relative;
+    height:700px;
+    width:58%;
+    margin: 0 auto;
+}
+
+.carousel_image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.carousel_track-container{
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
+
+.carousel_track{
+    padding:0;
+    margin:0;
+    list-style:none;
+    position:relative;
+    height:100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel_slide{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+}
+
+.carousel_button{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    background:transparent;
+    border:0;
+    cursor:pointer;
+}
+
+.carousel_button-left{
+    left: -40px;
+}
+
+.carousel_button-right{
+    right: -40px;
+}
+.carousel_button img{
+    width:12px;
+}
+
+.carousel_nav{
+    display:flex;
+    justify-content:center;
+    padding:10px 0;
+}
+
+.carousel_indicator{
+    border:0;
+    border-radius:50%;
+    width:15px;
+    height:15px;
+    background:rgba(0,0,0,.3);
+    margin:0 12px;
+    cursor:pointer;
+}
+
+.carousel_indicator.current-slide{
+    background:rgba(0,0,0,.75);
+}
+
+
+
+/*TODO: TEXT CAROUSEL*/
+
+
+.is-hidden {display:none;}
+/*#####################MOBILE#####################*/
+@media screen and (max-width:600px){
+    body{
+    }
+/*----------NAVBAR-----------*/
+    .toggle-button{
+        display:flex;
+        align-items:center;
+}
+    .navbar-links{
+        width:100%;
+        display:none;
+        flex-direction:column;
+    }
+    
+    nav{
+        flex-direction:column;
+        align-items:flex-start;
+        margin:0;
+    }
+    
+    .navbar-links ul{
+        flex-direction:column;
+        width:100%;
+    }
+    
+    .navbar-links ul li a{
+        text-align:center;
+        width:100%;
+    }
+    
+    .navbar-links a:hover{
+        background-color:lightyellow;
+    }
+    .navbar-links.active{
+        display:flex;
+    }
+    
+    .test{
+       
+    }
+    
+    .logo{
+        text-align:center;
+    }
+    
+    .box-1{
+        width:100%;
+        height:108px;
+    }
+/*----------CAROUSEL-----------*/
+    
+    .carousel{
+        width:100%;
+    }
+}
