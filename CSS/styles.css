@@ -1,4 +1,4 @@
-/*FOR GITHUB, MAKE FOLDERS FOR PICTURES, CSS ETC FOR CLEARNER*/
+
 *{
     box-sizing: border-box;
 }
@@ -13,8 +13,8 @@ nav{
     display:flex;
     align-items: center;
     color:black;
-    margin-left:20%;
-    margin-right:20%;
+    width:60%;
+    margin: 0 auto;
 
 }
 nav ul {
@@ -104,7 +104,7 @@ li.logo{
 .carousel{
     position: relative;
     height:700px;
-    width:58%;
+    width:60%;
     margin: 0 auto;
 }
 
@@ -153,13 +153,14 @@ li.logo{
     right: -40px;
 }
 .carousel_button img{
-    width:12px;
+    width:20px;
 }
 
 .carousel_nav{
     display:flex;
     justify-content:center;
     padding:10px 0;
+    height:40px;
 }
 
 .carousel_indicator{
@@ -175,11 +176,42 @@ li.logo{
 .carousel_indicator.current-slide{
     background:rgba(0,0,0,.75);
 }
+/*--------TEXT----------*/
+.text_carousel{
+    position:relative;
+    height:300px;
+    width:60%;
+    margin: 0 auto;
+    margin-top:30px;
+}
 
+.carousel_text{
+    width:100%;
+    font-family:arial;
+    text-align:center;
+}
 
+.text_track-container{
+    height:100%;
+    position:relative;
+    overflow:hidden;
+}
 
-/*TODO: TEXT CAROUSEL*/
+.text_track{
+    padding:0;
+    margin:0;
+    list-style:none;
+    position:relative;
+    height:100%;
+    transition: transform 250ms ease-in;
+}
 
+.text_slide{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width:100%;
+}
 
 .is-hidden {display:none;}
 /*#####################MOBILE#####################*/
@@ -216,12 +248,9 @@ li.logo{
     .navbar-links a:hover{
         background-color:lightyellow;
     }
+    
     .navbar-links.active{
         display:flex;
-    }
-    
-    .test{
-       
     }
     
     .logo{

@@ -1,3 +1,4 @@
+
 const track = document.querySelector('.carousel_track'); 
 const slides = Array.from(track.children);
 const nextButton = document.querySelector('.carousel_button-right');
@@ -22,6 +23,11 @@ const moveToSlide = (track, currentSlide, targetSlide) =>{
     targetSlide.classList.add('current-slide');
 }
 
+const moveToTextSlide = (textTrack, currentSlide, targetSlide) =>{
+    textTrack.style.transform = 'translateX(-' + targetSlide.style.left + ')'
+    currentSlide.classList.remove('current-slide');
+    targetSlide.classList.add('current-slide');
+}
 
 const updateDots = (currentDot, targetDot) =>{
     currentDot.classList.remove('current-slide');
@@ -57,6 +63,8 @@ previousButton.addEventListener('click', e => {
     
     updateDots(currentDot, previousDot);
     hideShowArrows(slides, previousButton, nextButton, previousIndex);
+    
+    moveToTextSlide(textTrack, currentSlide, prevSlide);
 })
 
 //when I click right, move slides to the right
@@ -68,13 +76,15 @@ nextButton.addEventListener('click', e => {
     const currentDot = dotsNav.querySelector('.current-slide');
     const nextDot = currentDot.nextElementSibling;
     const nextIndex = slides.findIndex(slide => slide === nextSlide);
-    
+    const amountToMove = nextSlide.style.left;
     moveToSlide(track, currentSlide, nextSlide);
     updateDots(currentDot, nextDot);
     hideShowArrows(slides, previousButton, nextButton, nextIndex);
     
     
-    console.log(currentSlide.nextElementSibling);
+    
+    moveToTextSlide(textTrack, currentSlide, nextSlide);
+
 })
 
 
@@ -97,7 +107,20 @@ dotsNav.addEventListener('click', e => {
     
     hideShowArrows(slides, previousButton, nextButton, targetIndex);
    
-
+    moveToTextSlide(textTrack, currentSlide, targetSlide);
+    
 })
+
+//----------------TEXT CAROUSEL-----------//
+const textTrack = document.querySelector('.text_track');
+const textSlides = Array.from(textTrack.children);
+
+
+const setTextSlidePosition = (textSlide, index)=>{
+    textSlide.style.left = slideWidth * index + 'px';
+};
+textSlides.forEach(setTextSlidePosition);
+
+
 
 
