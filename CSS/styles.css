@@ -220,11 +220,14 @@ li.logo{
 
 .text_slide button{
     font-size:20px;
+    border-radius: 8px;
+    padding:10px 30px 10px 30px;
 }
 
 .text_button{
     text-align:center;
 }
+
 .is-hidden {display:none;}
 /*#####################MOBILE#####################*/
 @media screen and (max-width:600px){
@@ -245,6 +248,7 @@ li.logo{
         flex-direction:column;
         align-items:flex-start;
         margin:0;
+        text-align:center;
     }
     
     .navbar-links ul{
@@ -266,16 +270,20 @@ li.logo{
     }
     
     .logo{
+       width:100%;
         text-align:center;
     }
     
     .box-1{
         width:100%;
         height:108px;
+        text-align:center;
+        margin-left: 35%;
     }
 /*----------CAROUSEL-----------*/
     
     .carousel{
-        width:100%;
+        width:80%;
+        height:350px;
     }
 }
