@@ -288,6 +288,57 @@ li.logo{
     padding-right:60px;
 }
 
+
+/*********************MENU************************/
+.menu-container{
+    margin-left:20%;
+    margin-right:20%;
+    justify-content: space-around;
+    
+}
+
+.menu-container ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.menu-row-1{
+    display:flex;
+    margin:0;
+}
+
+.menu-row-1 li{
+    margin:0;
+    padding:1% 100px;
+}
+
+.menu-container p{
+    font-size:20px;
+    text-align:center;
+}
+.box{
+    background-image:url(../Images/placeholder.png);
+    width:200px;
+    height:200px;
+    border: solid;
+}
+
+.menu-row-2{
+    display:flex;
+}
+
+.menu-row-2 li{
+        padding:1% 100px;
+}
+
+.menu-row-3{
+    display:flex;
+}
+
+.menu-row-3 li{
+    padding:1% 100px;
+}
 /*##################FOOTER########################*/
 footer{
     height:100px;
