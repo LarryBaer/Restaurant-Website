@@ -233,13 +233,10 @@ nav h1 a{
     padding:0;
     list-style:none;
     overflow:hidden;
-
+    text-align:center;
 }
 
-.menu-row-1{
-    display:flex;
-    margin:0;
-}
+
 
 .menu-row-1 li{
     margin:0;
@@ -259,18 +256,64 @@ nav h1 a{
     border: solid;
     display:inline-block;
     box-shadow: 0 8px 6px -6px black;
+    background-repeat: no-repeat;
+    object-fit:cover;
+    object-position:center;
 }
 
+
+.menu-row-1{
+    display:flex;
+    margin:0;
+    justify-content: space-between;
+}
 
 .menu-row-2{
     display:flex;
+    justify-content: space-between;
 }
-
 
 .menu-row-3{
     display:flex;
+    justify-content: space-between;
 }
 
+.menu_image-1{
+    background-image:url(../Images/burger1.jpg);
+
+}
+
+.menu_image-2{
+    background-image:url(../Images/chickentenders1.jpg);
+}
+
+.menu_image-3{
+    background-image:url(../Images/hotdogs.jpg);
+}
+
+.menu_image-4{
+    background-image:url(../Images/onionrings.jpg);
+}
+
+.menu_image-5{
+    background-image:url(../Images/fries.jpg);
+}
+
+.menu_image-6{
+    background-image:url(../Images/rolls.jpg);
+}
+
+.menu_image-7{
+    background-image:url(../Images/cookies.jpg);
+}
+
+.menu_image-8{
+    background-image:url(../Images/milkshake1.jpg);
+}
+
+.menu_image-9{
+    background-image:url(../Images/cheesecakeresized.jpg);
+}
 /*##################FOOTER########################*/
 footer{
     height:100px;
