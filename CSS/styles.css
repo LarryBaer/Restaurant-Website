@@ -9,95 +9,24 @@ body{
 }
 /*########################NAVBAR##############################*/
 nav{
-    display:flex;
-    align-items: center;
     color:black;
     width:60%;
     margin: 0 auto;
-
-}
-nav ul {
-    display:inline;
-    
 }
 
-.navbar-links{
-    width:100%;
-    display:flex;
-
-}
-.navbar-links ul{
-    margin:0;
-    padding:0;
-    display:flex;
-
+nav h1{
+    text-align:center;
+    font-size:50px;
+    font-family:arial;
 }
 
-.navbar-links li{
-    list-style:none;
-    
-}
-
-.navbar-links li a{
-    text-decoration:none;
-    color:red;
-    padding:1rem;
-    display:block;
-    font-family: 'Oswald', sans-serif;
-    font-size:25px;
-
-}
-
-.toggle-button{
-    position:absolute;
-    top:.75rem;
-    right:1rem;
-    flex-direction:column;
-    width:30px;
-    height:21px;
+nav h1 a{
     text-decoration:none;
     color:black;
-    display:none;
-    font-size:50px;
-    margin-top:10px;
 }
-
-li.logo img{
-    width:108px;
-    height:108px;
-    margin-top:0px;
+.nav_header{
+    text-align:center;
 }
-
-li.logo{
-    margin:0px;
-}
-.box-1{
-    width:108px;
-}
-.box-1 ul{
-    list-style-type:none;
-}
-
-.nav-left{
-    text-align:left;
-
-}
-
-.nav-right{
-    text-align:right;
-    justify-content:flex-end;
-    flex:1;
-}
-
-.navright ul{
-    justify-content:flex-end;
-}
-
-.right-ul{
-    justify-content:flex-end;
-}
-
-
 
 /*########################CAROUSEL##############################*/
 .carousel{
@@ -225,6 +154,7 @@ li.logo{
     background-color:orange;
     font-family:arial;
     border:none;
+    cursor:pointer;
 }
 
 .text_button{
@@ -290,10 +220,11 @@ li.logo{
 
 
 /*********************MENU************************/
+
 .menu-container{
     margin-left:20%;
     margin-right:20%;
-    justify-content: space-around;
+    text-align:center;
     
 }
 
@@ -301,6 +232,8 @@ li.logo{
     margin:0;
     padding:0;
     list-style:none;
+    overflow:hidden;
+
 }
 
 .menu-row-1{
@@ -310,35 +243,34 @@ li.logo{
 
 .menu-row-1 li{
     margin:0;
-    padding:1% 100px;
+    text-align:center;
+    justify-content: center;
 }
 
 .menu-container p{
     font-size:20px;
     text-align:center;
 }
+
 .box{
     background-image:url(../Images/placeholder.png);
     width:200px;
     height:200px;
     border: solid;
+    display:inline-block;
+    box-shadow: 0 8px 6px -6px black;
 }
+
 
 .menu-row-2{
     display:flex;
 }
 
-.menu-row-2 li{
-        padding:1% 100px;
-}
 
 .menu-row-3{
     display:flex;
 }
 
-.menu-row-3 li{
-    padding:1% 100px;
-}
 /*##################FOOTER########################*/
 footer{
     height:100px;
@@ -351,60 +283,90 @@ footer p{
     color:white;
 }
 /*##################MOBILE#####################*/
-@media screen and (max-width:600px){
+@media screen and (max-width:1500px){
+    
+    .row-1{
+        flex-direction:column;
+    }
+    
+    .row-1_image{
+        display:none;
+    }
+    
+    .menu-container{
+        flex-direction:column;
+    }
+    
+}
+
+@media screen and (max-width:1300px){
+
+    
+    .menu-row-1{
+        flex-direction:column;
+    }
+    
+    .menu-row-2{
+        flex-direction:column;
+    }
+    
+    .menu-row-3{
+        flex-direction:column;
+    }
+
+}
+
+@media screen and (max-width:1100px){
+    .carousel{
+        width:80%;
+        height:650px;
+    }
+}
+
+@media screen and (max-width:700px){
     body{
     }
 /*----------NAVBAR-----------*/
-    .toggle-button{
-        display:flex;
-        align-items:center;
-}
-    .navbar-links{
-        width:100%;
-        display:none;
-        flex-direction:column;
-    }
     
     nav{
-        flex-direction:column;
-        align-items:flex-start;
         margin:0;
         text-align:center;
-    }
-    
-    .navbar-links ul{
-        flex-direction:column;
         width:100%;
     }
     
-    .navbar-links ul li a{
-        text-align:center;
-        width:100%;
-    }
-    
-    .navbar-links a:hover{
-        background-color:lightyellow;
-    }
-    
-    .navbar-links.active{
-        display:flex;
-    }
-    
-    .logo{
-       width:100%;
-        text-align:center;
-    }
-    
-    .box-1{
-        width:100%;
-        height:108px;
-        text-align:center;
-        margin-left: 35%;
-    }
-/*----------CAROUSEL-----------*/
+
+/*----------CAROUSEL------------*/
     
     .carousel{
         width:80%;
         height:350px;
     }
+    
+/*------------BOTTOM-ROW----------*/
+    .rows{
+        width:100%;
+        flex-direction:column;
+    }
+    
+    .row-1{
+
+    }
+    
+    .row-1_text{
+
+    }
+    
+    .row-1_image{
+        width:100%;
+        height:200px;
+    }
+    
+/*------------MENU----------------*/
+    .menu-container{
+        flex-direction:column;
+    }
 }
+
+
+
+
